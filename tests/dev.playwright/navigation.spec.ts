@@ -4,7 +4,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto("https://playwright.dev/");
 });
 
-test("RD-1209 documentation 'getting started' section order", async ({
+test("@T3b2a0540 documentation 'getting started' section order", async ({
   page,
 }) => {
   await page.getByRole("link", { name: "Docs" }).click();
@@ -28,7 +28,7 @@ test("RD-1209 documentation 'getting started' section order", async ({
   await expect(listItems).toHaveText(expectedListItems, { ignoreCase: false });
 });
 
-test("RD-1210 logo should redirect to the main page", async ({ page }) => {
+test("@T656cec71 logo should redirect to the main page", async ({ page }) => {
   await page.getByRole("link", { name: "Docs" }).click();
 
   await expect(page).toHaveURL(/docs/);
@@ -40,7 +40,7 @@ test("RD-1210 logo should redirect to the main page", async ({ page }) => {
   await expect(page).toHaveURL("https://playwright.dev/");
 });
 
-test("RD-1211 search should return at least one item", async ({ page }) => {
+test("@T6736f0cc search should return at least one item", async ({ page }) => {
   await page.goto("https://playwright.dev/");
   await page.getByRole("button", { name: "Search (Command+K)" }).click();
   await expect(page.getByRole("searchbox", { name: "Search" })).toBeVisible();
