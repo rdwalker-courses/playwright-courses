@@ -1,0 +1,13 @@
+{
+  "name": "qa-dojo-practice-2",
+  "version": "1.0.0",
+  "description": "personal practice",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Roman Doroshenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.17"
+  }
+}
